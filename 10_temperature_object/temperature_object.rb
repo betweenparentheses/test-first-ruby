@@ -23,11 +23,23 @@ class Temperature
     Temperature.new(:f => degrees_fahrenheit)
   end
   
+  def self.ftoc
+  end
+  
+  def self.ctof
+  end
+  
 end
 
 
-class Celsius
+class Celsius < Temperature
+  def initialize(temperature)
+    @celsius = temperature
+  end
 end
 
-class Fahrenheit
+class Fahrenheit < Temperature
+  def initialize(temperature)
+    @fahrenheit = temperature
+  end
 end
